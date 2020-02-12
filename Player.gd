@@ -51,6 +51,6 @@ func _physics_process(delta):
 		if velocity.y < 0:
 			$AnimatedSprite.play("jump")
 		else:
-			$AnimatedSprite.play("fall")
+			$AnimatedSprite.play("jump")
 	
 	velocity = move_and_slide(velocity, FLOOR)

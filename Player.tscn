@@ -9,7 +9,7 @@
 [ext_resource path="res://pltformio_sprite/2.png" type="Texture" id=7]
 [ext_resource path="res://pltformio_sprite/4.png" type="Texture" id=8]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": false,
@@ -32,7 +32,7 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7.08234, 10.96 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -42,7 +42,7 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "run"
 
 [node name="Position2D" type="Position2D" parent="."]
@@ -50,4 +50,7 @@ position = Vector2( 13.635, 3.47831 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-shape = SubResource( 1 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
