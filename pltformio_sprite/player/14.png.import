@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/17.png-608ab70fafc2bf0744e3fd516d2ff790.stex"
+path="res://.import/14.png-640945a1ea23c096826931ee6a86a2b6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pltformio_sprite/17.png"
-dest_files=[ "res://.import/17.png-608ab70fafc2bf0744e3fd516d2ff790.stex" ]
+source_file="res://pltformio_sprite/player/14.png"
+dest_files=[ "res://.import/14.png-640945a1ea23c096826931ee6a86a2b6.stex" ]
 
 [params]
 

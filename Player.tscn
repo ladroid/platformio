@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://pltformio_sprite/1.png" type="Texture" id=1]
+[ext_resource path="res://pltformio_sprite/player/1.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://pltformio_sprite/fall.png" type="Texture" id=3]
-[ext_resource path="res://pltformio_sprite/3.png" type="Texture" id=4]
-[ext_resource path="res://pltformio_sprite/5.png" type="Texture" id=5]
-[ext_resource path="res://pltformio_sprite/6.png" type="Texture" id=6]
-[ext_resource path="res://pltformio_sprite/2.png" type="Texture" id=7]
-[ext_resource path="res://pltformio_sprite/4.png" type="Texture" id=8]
+[ext_resource path="res://pltformio_sprite/player/3.png" type="Texture" id=4]
+[ext_resource path="res://pltformio_sprite/player/5.png" type="Texture" id=5]
+[ext_resource path="res://pltformio_sprite/player/6.png" type="Texture" id=6]
+[ext_resource path="res://pltformio_sprite/player/2.png" type="Texture" id=7]
+[ext_resource path="res://pltformio_sprite/player/4.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -36,6 +36,7 @@ animations = [ {
 extents = Vector2( 7.08234, 10.96 )
 
 [node name="Player" type="KinematicBody2D"]
+z_index = 1
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -46,7 +47,7 @@ frames = SubResource( 1 )
 animation = "run"
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 13.635, 3.47831 )
+position = Vector2( 17.809, 1.94785 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
