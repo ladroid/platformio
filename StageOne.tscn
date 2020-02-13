@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ground tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://StageOne.gd" type="Script" id=4]
+[ext_resource path="res://pltformio_sprite/background/Cave_Stage_Background.png" type="Texture" id=5]
 
 [node name="StageOne" type="Node"]
 script = ExtResource( 4 )
@@ -15,7 +16,19 @@ position = Vector2( 74.6856, 85.866 )
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 327687, 4, 0, 327688, 1, 0, 327689, 5, 0, 393223, 1073741830, 0, 393224, 1073741831, 0, 393225, 1073741832, 0, 458752, 6, 0, 458753, 7, 0, 458754, 7, 0, 458755, 8, 0, 458770, 4, 0, 458771, 5, 0, 524288, 9, 0, 524289, 10, 0, 524290, 10, 0, 524291, 11, 0, 524301, 12, 0, 524305, 4, 0, 524306, 10, 0, 524307, 11, 0, 589824, 9, 0, 589825, 10, 0, 589826, 10, 0, 589827, 11, 0, 589837, 13, 0, 589840, 4, 0, 589841, 10, 0, 589842, 10, 0, 589843, 11, 0, 655360, 7, 0, 655361, 7, 0, 655362, 7, 0, 655363, 7, 0, 655364, 7, 0, 655365, 7, 0, 655366, 7, 0, 655367, 7, 0, 655368, 7, 0, 655369, 7, 0, 655370, 7, 0, 655371, 7, 0, 655372, 7, 0, 655373, 7, 0, 655374, 7, 0, 655375, 7, 0, 655376, 7, 0, 655377, 7, 0, 655378, 7, 0, 655379, 7, 0 )
+tile_data = PoolIntArray( 0, 11, 0, 65536, 11, 0, 131072, 11, 0, 196608, 11, 0, 262144, 11, 0, 327680, 11, 0, 327687, 4, 0, 327688, 1, 0, 327689, 5, 0, 393216, 11, 0, 393223, 1073741830, 0, 393224, 1073741831, 0, 393225, 1073741832, 0, 458752, 6, 0, 458753, 7, 0, 458754, 7, 0, 458755, 8, 0, 458770, 4, 0, 458771, 5, 0, 524288, 9, 0, 524289, 10, 0, 524290, 10, 0, 524291, 11, 0, 524301, 12, 0, 524305, 4, 0, 524306, 10, 0, 524307, 11, 0, 589824, 9, 0, 589825, 10, 0, 589826, 10, 0, 589827, 11, 0, 589837, 13, 0, 589840, 4, 0, 589841, 10, 0, 589842, 10, 0, 589843, 11, 0, 655360, 7, 0, 655361, 7, 0, 655362, 7, 0, 655363, 7, 0, 655364, 7, 0, 655365, 7, 0, 655366, 7, 0, 655367, 7, 0, 655368, 7, 0, 655369, 7, 0, 655370, 7, 0, 655371, 7, 0, 655372, 7, 0, 655373, 7, 0, 655374, 7, 0, 655375, 7, 0, 655376, 7, 0, 655377, 7, 0, 655378, 7, 0, 655379, 7, 0 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 185.497, 147.585 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 600, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, 46.9907 )
+texture = ExtResource( 5 )
+centered = false
+offset = Vector2( 0, -180 )
