@@ -1,19 +1,28 @@
 extends KinematicBody2D
 
 const gravity = 10
-const speed = 30
+#const speed = 30
+var speed = 1
+var hp = 1
 const FLOOR = Vector2(0, -1)
 
 var velocity = Vector2()
 var direction = 1
 var is_dead = false
 
+func _ready():
+	randomize()
+	speed = randi() % 100 + 1
+	hp = randi() % 100 + 1
+
 func dead():
-	is_dead = true
-	velocity = Vector2(0, 0)
-	$AnimatedSprite.play("dead")
-	$CollisionShape2D.disabled = true
-	$Timer.start()
+	hp -= 1
+	if hp <= 0:
+		is_dead = true
+		velocity = Vector2(0, 0)
+		$AnimatedSprite.play("dead")
+		$CollisionShape2D.disabled = true
+		$Timer.start()
 
 func _physics_process(delta):
 	if is_dead == false:
