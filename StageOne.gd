@@ -1,16 +1,20 @@
 extends Node
 
+export (PackedScene) var enemy
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var spawn_left = Vector2(80, 147.585)
+var spawn_right = Vector2(188, 147.585)
 
-
-# Called when the node enters the scene tree for the first time.
+func spawn_enemy():
+	var new_enemy = enemy.instance()
+	var temp = null
+	if rand_range(0, 2) > 0:
+		temp = spawn_right
+	else:
+		temp = spawn_left
+	new_enemy.set_position(temp)
+	add_child(new_enemy)
+	
 func _ready():
-	pass # Replace with function body.
+	spawn_enemy()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
