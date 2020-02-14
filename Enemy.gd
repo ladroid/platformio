@@ -6,7 +6,7 @@ var speed = 1
 var hp = 1
 const FLOOR = Vector2(0, -1)
 
-var velocity = Vector2(0, 46)
+var velocity = Vector2()
 var direction = 1
 var is_dead = false
 
