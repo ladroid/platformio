@@ -14,7 +14,6 @@ func _ready():
 	randomize()
 	speed = randi() % 100 + 1
 	hp = randi() % 100 + 1
-	print("here!")
 
 func dead():
 	hp -= 1
@@ -35,7 +34,6 @@ func _physics_process(delta):
 		$AnimatedSprite.play("walk")
 		velocity.y += gravity
 		velocity = move_and_slide(velocity, FLOOR)
-		print(velocity)
 	
 	if is_on_wall():
 		direction = direction * -1

@@ -30,13 +30,4 @@ func instance_node(node, location):
 	var node_instance = node.instance()
 	add_child(node_instance)
 	node_instance.global_position = location
-
-#func _process(delta):
-	#var mousePos = get_viewport().get_mouse_position()
-	#var loc = $TileMap.world_to_map(mousePos)
-	#var cell = $TileMap.get_cell(loc.x, loc.y)
-	#if(cell != -1):
-		#print($TileMap.tile_set.tile_get_name(cell))
-	#else:
-		#$TileMap.set_cell(loc.x, loc.y, 1)
-
+	
