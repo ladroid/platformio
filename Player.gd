@@ -10,6 +10,7 @@ const fireball = preload("res://Fireball.tscn")
 var velocity = Vector2()
 var on_ground = false
 var is_dead = false
+var score = 0
 
 func _physics_process(delta):
 	if is_dead == false:

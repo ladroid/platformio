@@ -31,3 +31,5 @@ func instance_node(node, location):
 	add_child(node_instance)
 	node_instance.global_position = location
 	
+func count_score():
+	pass
