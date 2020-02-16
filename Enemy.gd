@@ -48,4 +48,8 @@ func _physics_process(delta):
 				get_slide_collision(i).collider.dead()
 
 func _on_Timer_timeout():
+	Global.score += 1
+	var LabelNode = get_parent().get_node("ScoreCounter/UI/Control/RichTextLabel")
+	LabelNode.text = str(Global.score)
+	print(Global.score)
 	queue_free()
