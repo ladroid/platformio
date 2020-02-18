@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://music/audiostart.wav" type="AudioStream" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://pltformio_sprite/menusettings/audioOff.png" type="Texture" id=10]
 [ext_resource path="res://pltformio_sprite/menusettings/pause.png" type="Texture" id=11]
 [ext_resource path="res://pltformio_sprite/menusettings/right.png" type="Texture" id=12]
+[ext_resource path="res://pltformio_sprite/menusettings/power.png" type="Texture" id=13]
 
 [sub_resource type="AnimatedTexture" id=1]
 
@@ -36,11 +37,22 @@ animations = [ {
 "loop": true,
 "name": "stop",
 "speed": 5.0
-}, {
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
 "frames": [ ExtResource( 12 ) ],
-"loop": true,
+"loop": false,
 "name": "play",
-"speed": 5.0
+"speed": 0.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 13 ) ],
+"loop": false,
+"name": "quit",
+"speed": 0.0
 } ]
 
 [node name="StageOne" type="Node"]
@@ -149,5 +161,57 @@ position = Vector2( 9.68677, 9.68673 )
 scale = Vector2( 0.329, 0.229 )
 frames = SubResource( 4 )
 animation = "stop"
+
+[node name="PopupDialog" type="PopupDialog" parent="Pause/CanvasLayer/Control"]
+visible = true
+margin_left = 64.4283
+margin_top = 38.1091
+margin_right = 253.428
+margin_bottom = 133.109
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Pause/CanvasLayer/Control/PopupDialog"]
+margin_left = 58.5479
+margin_top = 12.5426
+margin_right = 127.548
+margin_bottom = 33.5426
+text = "Pause"
+align = 1
+
+[node name="unpause" type="Button" parent="Pause/CanvasLayer/Control/PopupDialog"]
+margin_left = 80.4442
+margin_top = 31.4389
+margin_right = 105.444
+margin_bottom = 52.4389
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Pause/CanvasLayer/Control/PopupDialog/unpause"]
+position = Vector2( 15.5638, 10.0053 )
+scale = Vector2( 0.329, 0.229 )
+frames = SubResource( 5 )
+animation = "play"
+
+[node name="quit" type="Button" parent="Pause/CanvasLayer/Control/PopupDialog"]
+margin_left = 80.1064
+margin_top = 57.6649
+margin_right = 106.106
+margin_bottom = 81.6649
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Pause/CanvasLayer/Control/PopupDialog/quit"]
+position = Vector2( 12.2287, 12.2287 )
+scale = Vector2( 0.329, 0.295702 )
+frames = SubResource( 6 )
+animation = "quit"
 [connection signal="pressed" from="Sound/CanvasLayer/Control/Button" to="Sound/CanvasLayer/Control/Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/Control/Button" to="Pause/CanvasLayer/Control" method="_on_Button_pressed"]
+[connection signal="pressed" from="Pause/CanvasLayer/Control/PopupDialog/unpause" to="Pause/CanvasLayer/Control" method="_on_unpause_pressed"]
+[connection signal="pressed" from="Pause/CanvasLayer/Control/PopupDialog/quit" to="Pause/CanvasLayer/Control" method="_on_quit_pressed"]
