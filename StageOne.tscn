@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://music/audiostart.wav" type="AudioStream" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://pltformio_sprite/menusettings/right.png" type="Texture" id=12]
 [ext_resource path="res://pltformio_sprite/menusettings/power.png" type="Texture" id=13]
 [ext_resource path="res://fonts/Minecraft.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://icon.png" type="Texture" id=15]
+[ext_resource path="res://shader/fog.shader" type="Shader" id=16]
 
 [sub_resource type="DynamicFont" id=8]
 font_data = ExtResource( 14 )
@@ -61,6 +63,11 @@ animations = [ {
 "name": "quit",
 "speed": 0.0
 } ]
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = ExtResource( 16 )
+shader_param/color = Vector3( 1, 1, 1 )
+shader_param/OCTAVES = 4
 
 [node name="StageOne" type="Node"]
 script = ExtResource( 4 )
@@ -220,6 +227,12 @@ position = Vector2( 12.2287, 12.2287 )
 scale = Vector2( 0.329, 0.295702 )
 frames = SubResource( 6 )
 animation = "quit"
+
+[node name="icon" type="Sprite" parent="."]
+material = SubResource( 10 )
+position = Vector2( 595.61, 28.2629 )
+scale = Vector2( 40, 40 )
+texture = ExtResource( 15 )
 [connection signal="pressed" from="Sound/CanvasLayer/Control/Button" to="Sound/CanvasLayer/Control/Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/Control/Button" to="Pause/CanvasLayer/Control" method="_on_Button_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/Control/PopupDialog/unpause" to="Pause/CanvasLayer/Control" method="_on_unpause_pressed"]
