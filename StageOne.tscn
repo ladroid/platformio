@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://music/audiostart.wav" type="AudioStream" id=2]
@@ -8,6 +8,40 @@
 [ext_resource path="res://SoundButton.gd" type="Script" id=6]
 [ext_resource path="res://World_generator.tscn" type="PackedScene" id=7]
 [ext_resource path="res://PauseButtonControl.gd" type="Script" id=8]
+[ext_resource path="res://pltformio_sprite/menusettings/audioOn.png" type="Texture" id=9]
+[ext_resource path="res://pltformio_sprite/menusettings/audioOff.png" type="Texture" id=10]
+[ext_resource path="res://pltformio_sprite/menusettings/pause.png" type="Texture" id=11]
+[ext_resource path="res://pltformio_sprite/menusettings/right.png" type="Texture" id=12]
+
+[sub_resource type="AnimatedTexture" id=1]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": false,
+"name": "soundon",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "soundoff",
+"speed": 0.0
+} ]
+
+[sub_resource type="AnimatedTexture" id=3]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "stop",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "play",
+"speed": 5.0
+} ]
 
 [node name="StageOne" type="Node"]
 script = ExtResource( 4 )
@@ -70,7 +104,7 @@ margin_left = 288.947
 margin_top = 2.58566
 margin_right = 316.947
 margin_bottom = 22.5857
-text = "on"
+icon = SubResource( 1 )
 flat = true
 script = ExtResource( 6 )
 __meta__ = {
@@ -80,6 +114,12 @@ __meta__ = {
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound/CanvasLayer/Control/Button"]
 position = Vector2( -288.947, -2.58566 )
 stream = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Sound/CanvasLayer/Control/Button"]
+position = Vector2( 14.0186, 10.477 )
+scale = Vector2( 0.32923, 0.22885 )
+frames = SubResource( 2 )
+animation = "soundoff"
 
 [node name="Pause" type="Node" parent="."]
 
@@ -98,7 +138,16 @@ margin_left = 147.224
 margin_top = 2.26498
 margin_right = 159.224
 margin_bottom = 22.265
-text = "|"
+icon = SubResource( 3 )
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Pause/CanvasLayer/Control/Button"]
+position = Vector2( 9.68677, 9.68673 )
+scale = Vector2( 0.329, 0.229 )
+frames = SubResource( 4 )
+animation = "stop"
 [connection signal="pressed" from="Sound/CanvasLayer/Control/Button" to="Sound/CanvasLayer/Control/Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/Control/Button" to="Pause/CanvasLayer/Control" method="_on_Button_pressed"]
