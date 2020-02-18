@@ -163,7 +163,7 @@ frames = SubResource( 4 )
 animation = "stop"
 
 [node name="PopupDialog" type="PopupDialog" parent="Pause/CanvasLayer/Control"]
-visible = true
+pause_mode = 2
 margin_left = 64.4283
 margin_top = 38.1091
 margin_right = 253.428

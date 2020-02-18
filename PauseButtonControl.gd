@@ -21,8 +21,7 @@ func _on_Button_pressed():
 
 func _on_unpause_pressed():
 	pause = false
-	print("Pressed!")
-	queue_free()
+	get_tree().paused = false
 
 
 func _on_quit_pressed():
