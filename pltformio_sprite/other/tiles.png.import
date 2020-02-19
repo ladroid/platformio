@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles.png-bf40a8d1ce0efdc4b329c75762afe761.stex"
+path="res://.import/tiles.png-618cb24ec2df8f07c7d416c1b40fceb4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pltformio_sprite/tiles.png"
-dest_files=[ "res://.import/tiles.png-bf40a8d1ce0efdc4b329c75762afe761.stex" ]
+source_file="res://pltformio_sprite/other/tiles.png"
+dest_files=[ "res://.import/tiles.png-618cb24ec2df8f07c7d416c1b40fceb4.stex" ]
 
 [params]
 

@@ -2,12 +2,13 @@
 
 [ext_resource path="res://pltformio_sprite/player/1.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
-[ext_resource path="res://pltformio_sprite/fall.png" type="Texture" id=3]
+[ext_resource path="res://pltformio_sprite/other/fall.png" type="Texture" id=3]
 [ext_resource path="res://pltformio_sprite/player/3.png" type="Texture" id=4]
 [ext_resource path="res://pltformio_sprite/player/5.png" type="Texture" id=5]
 [ext_resource path="res://pltformio_sprite/player/6.png" type="Texture" id=6]
 [ext_resource path="res://pltformio_sprite/player/2.png" type="Texture" id=7]
 [ext_resource path="res://pltformio_sprite/player/4.png" type="Texture" id=8]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2DLight.png-030c9f07eefdf378dbe2e7c82f0c7ea2.stex"
+path="res://.import/sheet.png-4d3551e07419898a9fb3c69a6aec9e05.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pltformio_sprite/2DLight.png"
-dest_files=[ "res://.import/2DLight.png-030c9f07eefdf378dbe2e7c82f0c7ea2.stex" ]
+source_file="res://pltformio_sprite/other/sheet.png"
+dest_files=[ "res://.import/sheet.png-4d3551e07419898a9fb3c69a6aec9e05.stex" ]
 
 [params]
 

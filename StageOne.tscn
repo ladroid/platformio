@@ -17,12 +17,12 @@
 [ext_resource path="res://icon.png" type="Texture" id=15]
 [ext_resource path="res://shader/fog.shader" type="Shader" id=16]
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 14 )
 
-[sub_resource type="AnimatedTexture" id=1]
+[sub_resource type="AnimatedTexture" id=2]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 9 ) ],
 "loop": false,
@@ -35,9 +35,9 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="AnimatedTexture" id=3]
+[sub_resource type="AnimatedTexture" id=4]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
@@ -45,10 +45,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 14 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ ExtResource( 12 ) ],
 "loop": false,
@@ -56,7 +56,7 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ ExtResource( 13 ) ],
 "loop": false,
@@ -64,7 +64,7 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="ShaderMaterial" id=10]
+[sub_resource type="ShaderMaterial" id=9]
 shader = ExtResource( 16 )
 shader_param/color = Vector3( 1, 1, 1 )
 shader_param/OCTAVES = 4
@@ -110,7 +110,7 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="ScoreCounter/UI/Control"]
 margin_right = 40.0
 margin_bottom = 40.0
-custom_fonts/normal_font = SubResource( 8 )
+custom_fonts/normal_font = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -131,7 +131,7 @@ margin_left = 288.947
 margin_top = 2.58566
 margin_right = 316.947
 margin_bottom = 22.5857
-icon = SubResource( 1 )
+icon = SubResource( 2 )
 flat = true
 script = ExtResource( 6 )
 __meta__ = {
@@ -145,7 +145,7 @@ stream = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Sound/CanvasLayer/Control/Button"]
 position = Vector2( 14.0186, 10.477 )
 scale = Vector2( 0.32923, 0.22885 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "soundoff"
 
 [node name="Pause" type="Node" parent="."]
@@ -165,7 +165,7 @@ margin_left = 147.224
 margin_top = 2.26498
 margin_right = 159.224
 margin_bottom = 22.265
-icon = SubResource( 3 )
+icon = SubResource( 4 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -174,7 +174,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Pause/CanvasLayer/Control/Button"]
 position = Vector2( 9.68677, 9.68673 )
 scale = Vector2( 0.329, 0.229 )
-frames = SubResource( 4 )
+frames = SubResource( 5 )
 animation = "stop"
 
 [node name="PopupDialog" type="PopupDialog" parent="Pause/CanvasLayer/Control"]
@@ -192,7 +192,7 @@ margin_left = 58.5479
 margin_top = 12.5426
 margin_right = 127.548
 margin_bottom = 33.5426
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 text = "Pause"
 align = 1
 
@@ -209,7 +209,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Pause/CanvasLayer/Control/PopupDialog/unpause"]
 position = Vector2( 15.5638, 10.0053 )
 scale = Vector2( 0.329, 0.229 )
-frames = SubResource( 5 )
+frames = SubResource( 7 )
 animation = "play"
 
 [node name="quit" type="Button" parent="Pause/CanvasLayer/Control/PopupDialog"]
@@ -225,11 +225,11 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Pause/CanvasLayer/Control/PopupDialog/quit"]
 position = Vector2( 12.2287, 12.2287 )
 scale = Vector2( 0.329, 0.295702 )
-frames = SubResource( 6 )
+frames = SubResource( 8 )
 animation = "quit"
 
 [node name="icon" type="Sprite" parent="."]
-material = SubResource( 10 )
+material = SubResource( 9 )
 position = Vector2( 595.61, 28.2629 )
 scale = Vector2( 40, 40 )
 texture = ExtResource( 15 )
