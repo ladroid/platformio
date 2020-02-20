@@ -1,7 +1,7 @@
 extends Node
 
 func _on_start_pressed():
-	get_tree().change_scene("res://StageOne.tscn")
+	get_tree().change_scene("res://StageTwo.tscn")
 
 
 
