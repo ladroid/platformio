@@ -11,6 +11,8 @@ var velocity = Vector2()
 var on_ground = false
 var is_dead = false
 
+#var player_change = preload("res://StageTwoMenu.gd")
+
 func _physics_process(delta):
 	if is_dead == false:
 		if Input.is_action_pressed("ui_right"):

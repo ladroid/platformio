@@ -5,6 +5,16 @@ export (PackedScene) var enemy
 var spawn_left = Vector2(80, 147.585)
 var spawn_right = Vector2(188, 147.585)
 
+var player_change = load("res://StageTwoMenu.gd")
+
+func player_change():
+	var player_func = player_change.new()
+	print("C")
+	if player_func.archerButton == true:
+		print("Zzz")
+	#if player_func._on_archer_pressed() == true:
+	#	print('DD')
+
 func spawn_enemy():
 	#TODO: when we have infinty platform
 	#make for-loop for enemy 
@@ -21,6 +31,7 @@ func spawn_enemy():
 	
 func _ready():
 	spawn_enemy()
+	player_change()
 	Global.world = self
 
 func _exit_tree():
