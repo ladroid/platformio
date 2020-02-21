@@ -22,20 +22,29 @@ func _physics_process(delta):
 	if is_dead == false:
 		if Input.is_action_pressed("ui_right"):
 			velocity.x = speed
-			$AnimatedSprite.play("run")
+			if Global.archerButton == true:
+				$AnimatedSprite.play("archer_run")
+			else:
+				$AnimatedSprite.play("run")
 			$AnimatedSprite.flip_h = false
 			if sign($Position2D.position.x) == -1:
 				$Position2D.position.x *= -1
 		elif Input.is_action_pressed("ui_left"):
 			velocity.x = -speed
-			$AnimatedSprite.play("run")
+			if Global.archerButton == true:
+				$AnimatedSprite.play("archer_run")
+			else:
+				$AnimatedSprite.play("run")
 			$AnimatedSprite.flip_h = true
 			if sign($Position2D.position.x) == 1:
 				$Position2D.position.x *= -1
 		else:
 			velocity.x = 0
 			if on_ground == true:
-				$AnimatedSprite.play("idle")	
+				if Global.archerButton == true:
+					$AnimatedSprite.play("archer_idle")
+				else:
+					$AnimatedSprite.play("idle")	
 			
 		if Input.is_action_pressed("ui_up"):
 			if on_ground == true:
@@ -58,9 +67,15 @@ func _physics_process(delta):
 		else:
 			on_ground = false
 			if velocity.y < 0:
-				$AnimatedSprite.play("jump")
+				if Global.archerButton == true:
+					$AnimatedSprite.play("archer_jump")
+				else:
+					$AnimatedSprite.play("jump")
 			else:
-				$AnimatedSprite.play("jump")
+				if Global.archerButton == true:
+					$AnimatedSprite.play("archer_jump")
+				else:
+					$AnimatedSprite.play("jump")
 		
 		velocity = move_and_slide(velocity, FLOOR)
 		
