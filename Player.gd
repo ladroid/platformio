@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-const speed = 60
 const gravity = 10
 const jump_power = -250
 const FLOOR = Vector2(0, -1)
@@ -10,10 +9,15 @@ const fireball = preload("res://Fireball.tscn")
 var velocity = Vector2()
 var on_ground = false
 var is_dead = false
-
-#var player_change = preload("res://StageTwoMenu.gd")
+var speed = 60
 
 func _physics_process(delta):
+	if Global.archerButton == true:
+		speed = 150
+	elif Global.warriorButton == true:
+		speed = 40
+	else:
+		speed = speed
 	if is_dead == false:
 		if Input.is_action_pressed("ui_right"):
 			velocity.x = speed
