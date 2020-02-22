@@ -52,13 +52,16 @@ func _physics_process(delta):
 				on_ground = false
 		
 		if Input.is_action_just_pressed("ui_focus_next"):
-			var fire_ball = fireball.instance()
-			if sign($Position2D.position.x) == 1:
-				fire_ball.set_fireball_direction(1)
+			if Global.archerButton == true:
+				$AnimatedSprite.play("archer_attack")
 			else:
-				fire_ball.set_fireball_direction(-1)
-			get_parent().add_child(fire_ball)
-			fire_ball.position = $Position2D.global_position
+				var fire_ball = fireball.instance()
+				if sign($Position2D.position.x) == 1:
+					fire_ball.set_fireball_direction(1)
+				else:
+					fire_ball.set_fireball_direction(-1)
+				get_parent().add_child(fire_ball)
+				fire_ball.position = $Position2D.global_position
 		
 		velocity.y += gravity
 		
@@ -87,7 +90,10 @@ func _physics_process(delta):
 func dead():
 	is_dead = true
 	velocity = Vector2(0, 0)
-	$AnimatedSprite.play("fall")
+	if Global.archerButton == true:
+		$AnimatedSprite.play("archer_fall")
+	else:
+		$AnimatedSprite.play("fall")
 	$CollisionShape2D.disabled = true
 	$Timer.start()
 	
