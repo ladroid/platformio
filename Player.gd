@@ -15,8 +15,11 @@ func _physics_process(delta):
 	if Global.archerButton == true:
 		speed = 150
 		jump_power = -350
+		get_node("AnimatedSprite").scale = Vector2(0.733, 0.803)
 	elif Global.warriorButton == true:
 		speed = 30
+		get_node("AnimatedSprite").scale = Vector2(0.413, 0.387)
+		get_node("AnimatedSprite").position = Vector2(-1.185, -8.686)
 	else:
 		speed = speed
 	if is_dead == false:
@@ -24,6 +27,8 @@ func _physics_process(delta):
 			velocity.x = speed
 			if Global.archerButton == true:
 				$AnimatedSprite.play("archer_run")
+			elif Global.warriorButton == true:
+				$AnimatedSprite.play("knight_run")
 			else:
 				$AnimatedSprite.play("run")
 			$AnimatedSprite.flip_h = false
@@ -33,6 +38,8 @@ func _physics_process(delta):
 			velocity.x = -speed
 			if Global.archerButton == true:
 				$AnimatedSprite.play("archer_run")
+			elif Global.warriorButton == true:
+				$AnimatedSprite.play("knight_run")
 			else:
 				$AnimatedSprite.play("run")
 			$AnimatedSprite.flip_h = true
@@ -43,6 +50,8 @@ func _physics_process(delta):
 			if on_ground == true:
 				if Global.archerButton == true:
 					$AnimatedSprite.play("archer_idle")
+				elif Global.warriorButton == true:
+					$AnimatedSprite.play("knight_idle")
 				else:
 					$AnimatedSprite.play("idle")	
 			
@@ -72,11 +81,15 @@ func _physics_process(delta):
 			if velocity.y < 0:
 				if Global.archerButton == true:
 					$AnimatedSprite.play("archer_jump")
+				elif Global.warriorButton == true:
+					$AnimatedSprite.play("knight_jump")
 				else:
 					$AnimatedSprite.play("jump")
 			else:
 				if Global.archerButton == true:
 					$AnimatedSprite.play("archer_jump")
+				elif Global.warriorButton == true:
+					$AnimatedSprite.play("knight_jump")
 				else:
 					$AnimatedSprite.play("jump")
 		
@@ -92,6 +105,8 @@ func dead():
 	velocity = Vector2(0, 0)
 	if Global.archerButton == true:
 		$AnimatedSprite.play("archer_fall")
+	elif Global.warriorButton == true:
+		$AnimatedSprite.play("knight_fall")
 	else:
 		$AnimatedSprite.play("fall")
 	$CollisionShape2D.disabled = true

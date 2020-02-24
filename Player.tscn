@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://pltformio_sprite/player/1.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -26,13 +26,41 @@
 [ext_resource path="res://pltformio_sprite/archer/attack_2.png" type="Texture" id=24]
 [ext_resource path="res://pltformio_sprite/archer/attack_0.png" type="Texture" id=25]
 [ext_resource path="res://pltformio_sprite/archer/attack_1.png" type="Texture" id=26]
+[ext_resource path="res://pltformio_sprite/knight/idle1.png" type="Texture" id=27]
+[ext_resource path="res://pltformio_sprite/knight/run1.png" type="Texture" id=28]
+[ext_resource path="res://pltformio_sprite/knight/jump0.png" type="Texture" id=29]
+[ext_resource path="res://pltformio_sprite/knight/dead0.png" type="Texture" id=30]
+[ext_resource path="res://pltformio_sprite/knight/run0.png" type="Texture" id=31]
+[ext_resource path="res://pltformio_sprite/knight/idle0.png" type="Texture" id=32]
+[ext_resource path="res://pltformio_sprite/knight/idle3.png" type="Texture" id=33]
+[ext_resource path="res://pltformio_sprite/knight/idle2.png" type="Texture" id=34]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "knight_jump",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": false,
 "name": "idle",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 27 ), ExtResource( 34 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "knight_idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "knight_fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "knight_run",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 23 ) ],
 "loop": true,
@@ -87,7 +115,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "archer_attack"
+animation = "knight_fall"
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 17.809, 1.94785 )
