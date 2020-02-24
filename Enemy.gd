@@ -50,6 +50,6 @@ func _physics_process(delta):
 func _on_Timer_timeout():
 	Global.score += 1
 	var LabelNode = get_parent().get_node("ScoreCounter/UI/Control/RichTextLabel")
-	LabelNode.text = str(Global.score)
+	LabelNode.text = "Kills:" + str(Global.score)
 	print(Global.score)
 	queue_free()
