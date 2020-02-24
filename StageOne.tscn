@@ -91,6 +91,8 @@ scale = Vector2( 1.40444, 1.77703 )
 texture = ExtResource( 5 )
 centered = false
 offset = Vector2( 0, -180 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 640, 480 )
 
 [node name="World_generator" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0, 176 )
