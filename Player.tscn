@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=94 format=2]
 
 [ext_resource path="res://pltformio_sprite/player/1.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -26,41 +26,113 @@
 [ext_resource path="res://pltformio_sprite/archer/attack_2.png" type="Texture" id=24]
 [ext_resource path="res://pltformio_sprite/archer/attack_0.png" type="Texture" id=25]
 [ext_resource path="res://pltformio_sprite/archer/attack_1.png" type="Texture" id=26]
-[ext_resource path="res://pltformio_sprite/knight/idle1.png" type="Texture" id=27]
-[ext_resource path="res://pltformio_sprite/knight/run1.png" type="Texture" id=28]
-[ext_resource path="res://pltformio_sprite/knight/jump0.png" type="Texture" id=29]
-[ext_resource path="res://pltformio_sprite/knight/dead0.png" type="Texture" id=30]
-[ext_resource path="res://pltformio_sprite/knight/run0.png" type="Texture" id=31]
-[ext_resource path="res://pltformio_sprite/knight/idle0.png" type="Texture" id=32]
-[ext_resource path="res://pltformio_sprite/knight/idle3.png" type="Texture" id=33]
-[ext_resource path="res://pltformio_sprite/knight/idle2.png" type="Texture" id=34]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00010.png" type="Texture" id=27]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00007.png" type="Texture" id=28]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00004.png" type="Texture" id=29]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00006.png" type="Texture" id=30]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00027.png" type="Texture" id=31]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00032.png" type="Texture" id=32]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00008.png" type="Texture" id=33]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00009.png" type="Texture" id=34]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00010.png" type="Texture" id=35]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00011.png" type="Texture" id=36]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00003.png" type="Texture" id=37]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00006.png" type="Texture" id=38]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00007.png" type="Texture" id=39]
+[ext_resource path="res://pltformio_sprite/Golden Knight jump/Golden Knight jump with sword face right/golden knight JUMP with sword_00001.png" type="Texture" id=40]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00001.png" type="Texture" id=41]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00005.png" type="Texture" id=42]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00008.png" type="Texture" id=43]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00015.png" type="Texture" id=44]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00016.png" type="Texture" id=45]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00019.png" type="Texture" id=46]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00022.png" type="Texture" id=47]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00028.png" type="Texture" id=48]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00029.png" type="Texture" id=49]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00033.png" type="Texture" id=50]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00001.png" type="Texture" id=51]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00002.png" type="Texture" id=52]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00005.png" type="Texture" id=53]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00009.png" type="Texture" id=54]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00013.png" type="Texture" id=55]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00016.png" type="Texture" id=56]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00017.png" type="Texture" id=57]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00018.png" type="Texture" id=58]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00012.png" type="Texture" id=59]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00001.png" type="Texture" id=60]
+[ext_resource path="res://pltformio_sprite/Golden Knight jump/Golden Knight jump with sword face right/zgolden knight fall with sword_00009.png" type="Texture" id=61]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00002.png" type="Texture" id=62]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00006.png" type="Texture" id=63]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00003.png" type="Texture" id=64]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00010.png" type="Texture" id=65]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00011.png" type="Texture" id=66]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00012.png" type="Texture" id=67]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00014.png" type="Texture" id=68]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00007.png" type="Texture" id=69]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00009.png" type="Texture" id=70]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00013.png" type="Texture" id=71]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00017.png" type="Texture" id=72]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00018.png" type="Texture" id=73]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00020.png" type="Texture" id=74]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00021.png" type="Texture" id=75]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00023.png" type="Texture" id=76]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00024.png" type="Texture" id=77]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00025.png" type="Texture" id=78]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00026.png" type="Texture" id=79]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00030.png" type="Texture" id=80]
+[ext_resource path="res://pltformio_sprite/Golden knight died face right with sword/golden knight animation with sword die face right _00031.png" type="Texture" id=81]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00002.png" type="Texture" id=82]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00004.png" type="Texture" id=83]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00003.png" type="Texture" id=84]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00004.png" type="Texture" id=85]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00008.png" type="Texture" id=86]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00011.png" type="Texture" id=87]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00012.png" type="Texture" id=88]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00014.png" type="Texture" id=89]
+[ext_resource path="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00015.png" type="Texture" id=90]
+[ext_resource path="res://pltformio_sprite/Golden Knight stand idle breathing/golden knight animation idle breathing_00005.png" type="Texture" id=91]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 29 ) ],
-"loop": true,
-"name": "knight_jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": false,
 "name": "idle",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 32 ), ExtResource( 27 ), ExtResource( 34 ), ExtResource( 33 ) ],
+"frames": [ ExtResource( 22 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "archer_idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "archer_jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 21 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "archer_run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 61 ) ],
+"loop": true,
+"name": "knight_jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ), ExtResource( 82 ), ExtResource( 37 ), ExtResource( 83 ), ExtResource( 91 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 59 ) ],
 "loop": true,
 "name": "knight_idle",
-"speed": 5.0
+"speed": 24.0
 }, {
-"frames": [ ExtResource( 30 ) ],
+"frames": [ ExtResource( 41 ), ExtResource( 62 ), ExtResource( 64 ), ExtResource( 29 ), ExtResource( 42 ), ExtResource( 63 ), ExtResource( 69 ), ExtResource( 43 ), ExtResource( 70 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 71 ), ExtResource( 68 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 46 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 47 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 31 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 32 ), ExtResource( 50 ) ],
 "loop": true,
 "name": "knight_fall",
-"speed": 5.0
+"speed": 24.0
 }, {
-"frames": [ ExtResource( 31 ), ExtResource( 28 ) ],
+"frames": [ ExtResource( 51 ), ExtResource( 52 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 53 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 86 ), ExtResource( 54 ), ExtResource( 27 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 55 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ) ],
 "loop": true,
 "name": "knight_run",
-"speed": 5.0
+"speed": 24.0
 }, {
 "frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 23 ) ],
 "loop": true,
@@ -86,21 +158,6 @@ animations = [ {
 "loop": false,
 "name": "archer_fall",
 "speed": 0.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "archer_idle",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 21 ), ExtResource( 19 ) ],
-"loop": true,
-"name": "archer_run",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "archer_jump",
-"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -115,7 +172,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "knight_fall"
+animation = "knight_run"
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 17.809, 1.94785 )

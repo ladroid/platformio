@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/golden knight animation walk right edit_00014.png-66baf3ba342e3a322456b7709b4eae32.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://pltformio_sprite/Golden Knight walk/golden knight animation walk right edit_00014.png"
+dest_files=[ "res://.import/golden knight animation walk right edit_00014.png-66baf3ba342e3a322456b7709b4eae32.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
