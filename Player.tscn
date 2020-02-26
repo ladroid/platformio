@@ -172,7 +172,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "knight_run"
+animation = "idle"
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 17.809, 1.94785 )
