@@ -4,8 +4,6 @@ func _ready():
 	pass
 
 func _process(delta):
-	print("AAAAAAAAAA")
-	print(Global.count_stage)
 	$Control/CenterContainer/Label.text = "Day " + str(Global.count_stage)
 	var t = Timer.new()
 	t.set_wait_time(3)

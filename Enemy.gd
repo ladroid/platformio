@@ -21,7 +21,8 @@ func dead():
 		is_dead = true
 		velocity = Vector2(0, 0)
 		$AnimatedSprite.play("dead")
-		$CollisionShape2D.disabled = true
+		#$CollisionShape2D.disabled = true
+		$CollisionShape2D.set_deferred("disabled", true)
 		$Timer.start()
 
 func _physics_process(delta):
