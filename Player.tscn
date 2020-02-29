@@ -115,15 +115,14 @@ extents = Vector2( 7.08234, 10.96 )
 [node name="Player" type="KinematicBody2D"]
 z_index = 1
 script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -0.65794, -0.0550141 )
+frames = SubResource( 1 )
+animation = "idle"
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 2.02432, -5.92246 )
-scale = Vector2( 0.113021, 0.111798 )
-frames = SubResource( 1 )
-animation = "knight_run"
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 17.809, 1.94785 )
