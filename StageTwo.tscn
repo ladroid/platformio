@@ -4,8 +4,6 @@
 [ext_resource path="res://fonts/Minecraft.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://StageTwoMenu.gd" type="Script" id=3]
 
-
-
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
 
@@ -22,8 +20,8 @@ font_data = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 160.027, 100.353 )
-scale = Vector2( 0.619265, 0.51197 )
+position = Vector2( 170.057, 113.487 )
+scale = Vector2( 0.65814, 0.579498 )
 texture = ExtResource( 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]

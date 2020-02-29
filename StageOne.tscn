@@ -25,14 +25,14 @@ font_data = ExtResource( 14 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 10 ) ],
-"loop": false,
-"name": "soundoff",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 9 ) ],
 "loop": false,
 "name": "soundon",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "soundoff",
 "speed": 0.0
 } ]
 

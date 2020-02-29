@@ -18,8 +18,8 @@ func _physics_process(delta):
 		get_node("AnimatedSprite").scale = Vector2(0.733, 0.803)
 	elif Global.warriorButton == true:
 		speed = 30
-		get_node("AnimatedSprite").scale = Vector2(0.114, 0.117)
-		get_node("AnimatedSprite").position = Vector2(-1.185, -8.686)
+		#get_node("AnimatedSprite").scale = Vector2(0.114, 0.117)
+		#get_node("AnimatedSprite").position = Vector2(-1.185, -8.686)
 	else:
 		speed = speed
 	if is_dead == false:
