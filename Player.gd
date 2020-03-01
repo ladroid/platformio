@@ -64,6 +64,8 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_focus_next"):
 			if Global.archerButton == true:
 				$AnimatedSprite.play("archer_attack")
+			elif Global.warriorButton == true:
+				$AnimatedSprite.play("knight_attack")
 			else:
 				var fire_ball = fireball.instance()
 				if sign($Position2D.position.x) == 1:

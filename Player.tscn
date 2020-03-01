@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://pltformio_sprite/player/1.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -34,12 +34,16 @@
 [ext_resource path="res://pltformio_sprite/silver_knight/run_1.png" type="Texture" id=32]
 [ext_resource path="res://pltformio_sprite/silver_knight/dead_3.png" type="Texture" id=33]
 [ext_resource path="res://pltformio_sprite/silver_knight/dead_6.png" type="Texture" id=34]
+[ext_resource path="res://pltformio_sprite/silver_knight/attack_1.png" type="Texture" id=35]
 [ext_resource path="res://pltformio_sprite/silver_knight/jump_2.png" type="Texture" id=36]
+[ext_resource path="res://pltformio_sprite/silver_knight/attack_3.png" type="Texture" id=37]
 [ext_resource path="res://pltformio_sprite/silver_knight/run_4.png" type="Texture" id=38]
 [ext_resource path="res://pltformio_sprite/silver_knight/jump_3.png" type="Texture" id=39]
 [ext_resource path="res://pltformio_sprite/silver_knight/run_2.png" type="Texture" id=40]
 [ext_resource path="res://pltformio_sprite/silver_knight/idle_1.png" type="Texture" id=41]
+[ext_resource path="res://pltformio_sprite/silver_knight/attack_4.png" type="Texture" id=42]
 [ext_resource path="res://pltformio_sprite/silver_knight/jump_1.png" type="Texture" id=43]
+[ext_resource path="res://pltformio_sprite/silver_knight/attack_2.png" type="Texture" id=44]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -47,6 +51,11 @@ animations = [ {
 "loop": false,
 "name": "idle",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 44 ), ExtResource( 37 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "knight_attack",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 32 ), ExtResource( 40 ), ExtResource( 31 ), ExtResource( 38 ) ],
 "loop": true,
@@ -119,7 +128,7 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -0.65794, -0.0550141 )
 frames = SubResource( 1 )
-animation = "idle"
+animation = "knight_attack"
 __meta__ = {
 "_edit_group_": true
 }
