@@ -4,6 +4,7 @@ const gravity = 10
 const FLOOR = Vector2(0, -1)
 
 const fireball = preload("res://Fireball.tscn")
+const arrow = preload("res://Arrow.tscn")
 
 var velocity = Vector2()
 var on_ground = false
@@ -63,7 +64,13 @@ func _physics_process(delta):
 		
 		if Input.is_action_just_pressed("ui_focus_next"):
 			if Global.archerButton == true:
-				$AnimatedSprite.play("archer_attack")
+				var arrow_att = arrow.instance()
+				if sign($Position2D.position.x) == 1:
+					arrow_att.set_arrow_direction(1)
+				else:
+					arrow_att.set_arrow_direction(-1)
+				get_parent().add_child(arrow_att)
+				arrow_att.position = $Position2D.global_position
 			elif Global.warriorButton == true:
 				$AnimatedSprite.play("knight_attack")
 			else:

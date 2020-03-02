@@ -7,7 +7,6 @@
 [ext_resource path="res://Enemy.gd" type="Script" id=5]
 [ext_resource path="res://pltformio_sprite/enemy/dead00.png" type="Texture" id=6]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 6 ) ],
