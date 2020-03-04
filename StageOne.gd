@@ -3,7 +3,7 @@ extends Node
 export (PackedScene) var enemy
 
 var spawn_left = Vector2(80, 147.585)
-var spawn_right = Vector2(190, 147.585)
+var spawn_right = Vector2(290, 147.585)
 
 func spawn_enemy():
 	#TODO: when we have infinty platform
