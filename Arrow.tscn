@@ -29,5 +29,7 @@ frames = SubResource( 2 )
 animation = "arrow_fly"
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 0.102438, 0.0512195 )
+scale = Vector2( 2.03462, 0.410983 )
 [connection signal="body_entered" from="." to="." method="_on_Arrow_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
