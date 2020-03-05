@@ -22,7 +22,10 @@ func dead():
 	if hp <= 0:
 		is_dead = true
 		velocity = Vector2(0, 0)
-		$AnimatedSprite.play("dead")
+		if rand_enemy == 0:
+			$AnimatedSprite.play("dead")
+		elif rand_enemy == 1:
+			$AnimatedSprite.play("bat_dead")
 		#$CollisionShape2D.disabled = true
 		$CollisionShape2D.set_deferred("disabled", true)
 		$Timer.start()
