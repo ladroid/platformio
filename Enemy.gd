@@ -9,11 +9,13 @@ const FLOOR = Vector2(0, -1)
 var velocity = Vector2()
 var direction = 1
 var is_dead = false
+var rand_enemy
 
 func _ready():
 	randomize()
 	speed = randi() % 100 + 1
 	hp = randi() % 100 + 1
+	rand_enemy = randi() & 1
 
 func dead():
 	hp -= 1
@@ -32,7 +34,10 @@ func _physics_process(delta):
 			$AnimatedSprite.flip_h = false
 		else:
 			$AnimatedSprite.flip_h = true
-		$AnimatedSprite.play("walk")
+		if rand_enemy == 0:
+			$AnimatedSprite.play("walk")
+		elif rand_enemy == 1:
+			$AnimatedSprite.play("bat_fly")
 		velocity.y += gravity
 		velocity = move_and_slide(velocity, FLOOR)
 	
