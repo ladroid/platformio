@@ -24,7 +24,7 @@ func spawn_enemy():
 		
 func spawn_coins():
 	#randomize()
-	for i in rand_range(1, 5):
+	for i in range(5):
 		var new_coin = coin.instance()
 		var temp = null
 		if rand_range(0, 2) > 0:
