@@ -8,8 +8,8 @@ func _process(delta):
 
 
 func _on_Coins_body_entered(body):
-	var a = 0
 	if "Player" == body.name:
-		a+=1
-		print(a)
+		Global.collect_coins += 1
+		var LabelText = get_parent().get_node("CoinsCollector/UI/Control/RichTextLabel")
+		LabelText.text = str(Global.collect_coins)
 		queue_free()
