@@ -33,10 +33,23 @@ func spawn_coins():
 			temp = spawn_left
 		new_coin.set_position(temp)
 		add_child(new_coin)
+		
+func increase_enemy():
+	if Global.enemy_increase > 0:
+		var new_enemy = enemy.instance()
+		new_enemy.scale(Vector2(2, 2))
+		var temp = null
+		if rand_range(0, 2) > 0:
+			temp = spawn_right
+		else:
+			temp = spawn_left
+		new_enemy.set_position(temp)
+		add_child(new_enemy)
 	
 func _ready():
 	spawn_enemy()
 	spawn_coins()
+	increase_enemy()
 	randomize()
 	Global.world = self
 

@@ -12,4 +12,5 @@ func _process(delta):
 func _on_ChangeStage_body_entered(body):
 	if "Player" in body.name:
 		Global.count_stage += 1
+		Global.enemy_increase += 1
 		get_tree().change_scene(target_stage)
