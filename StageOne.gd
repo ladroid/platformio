@@ -37,7 +37,6 @@ func spawn_coins():
 func increase_enemy():
 	if Global.enemy_increase > 0:
 		var new_enemy = enemy.instance()
-		new_enemy.scale(Vector2(2, 2))
 		var temp = null
 		if rand_range(0, 2) > 0:
 			temp = spawn_right
