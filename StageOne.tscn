@@ -266,6 +266,29 @@ margin_top = 2.01688
 margin_right = 104.54
 margin_bottom = 42.0169
 custom_fonts/normal_font = SubResource( 10 )
+
+[node name="spawnPos" type="Position2D" parent="."]
+
+[node name="Position2D2" type="Position2D" parent="spawnPos"]
+position = Vector2( 29.5238, 89.3483 )
+
+[node name="Position2D3" type="Position2D" parent="spawnPos"]
+position = Vector2( 105.276, 87.7944 )
+
+[node name="Position2D4" type="Position2D" parent="spawnPos"]
+position = Vector2( 164.712, 87.4059 )
+
+[node name="Position2D5" type="Position2D" parent="spawnPos"]
+position = Vector2( 228.032, 87.4059 )
+
+[node name="Position2D6" type="Position2D" parent="spawnPos"]
+position = Vector2( 311.942, 86.629 )
+
+[node name="Position2D7" type="Position2D" parent="spawnPos"]
+position = Vector2( 383.032, 85.4635 )
+
+[node name="Position2D8" type="Position2D" parent="spawnPos"]
+position = Vector2( 454.511, 83.9097 )
 [connection signal="pressed" from="Sound/CanvasLayer/Control/Button" to="Sound/CanvasLayer/Control/Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/Control/Button" to="Pause/CanvasLayer/Control" method="_on_Button_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/Control/PopupDialog/unpause" to="Pause/CanvasLayer/Control" method="_on_unpause_pressed"]

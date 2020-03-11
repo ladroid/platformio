@@ -45,6 +45,7 @@ func increase_enemy():
 		new_enemy.set_position(temp)
 		add_child(new_enemy)
 	
+	
 func _ready():
 	spawn_enemy()
 	spawn_coins()

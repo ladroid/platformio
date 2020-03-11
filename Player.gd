@@ -5,6 +5,7 @@ const FLOOR = Vector2(0, -1)
 
 const fireball = preload("res://Fireball.tscn")
 const arrow = preload("res://Arrow.tscn")
+const light = preload("res://Lightning.tscn")
 
 var velocity = Vector2()
 var on_ground = false
@@ -81,7 +82,17 @@ func _physics_process(delta):
 					fire_ball.set_fireball_direction(-1)
 				get_parent().add_child(fire_ball)
 				fire_ball.position = $Position2D.global_position
-		
+		if Input.is_key_pressed(KEY_L):
+			var light_instance = light.instance()
+			randomize()
+			var spawnPos = get_parent().get_node("spawnPos").get_children()
+			var spawnIndx = randi() % spawnPos.size()
+			var spawnPonts = spawnPos[spawnIndx]
+			spawnPos.remove(spawnIndx)
+			var pos = spawnPonts.get_global_position()
+			light_instance.set_global_position(pos)
+			get_parent().add_child(light_instance)
+			
 		velocity.y += gravity
 		
 		if is_on_floor():
