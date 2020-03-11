@@ -10,5 +10,5 @@ shader = ExtResource( 2 )
 material = SubResource( 1 )
 position = Vector2( 176.231, 107.298 )
 rotation = 1.5708
-scale = Vector2( 3.16731, 0.275367 )
+scale = Vector2( 2.68731, 0.275367 )
 texture = ExtResource( 1 )
