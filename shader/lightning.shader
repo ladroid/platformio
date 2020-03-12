@@ -34,7 +34,7 @@ void fragment() {
 	vec2 uv = UV;
 	vec4 color = vec4(0.0, 0.0, 0.0, 0.0);
 	
-	int lightmore = 3;
+	int lightmore = 15;
 	for (int i=0; i < lightmore; i++) {
 		t = uv * vec2(2.0, 1.0) + vec2(float(i), -float(i)) - TIME * 3.0;
 		y = fbm(t)*0.5;

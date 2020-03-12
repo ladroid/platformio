@@ -1,14 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://shader/lightning.shader" type="Shader" id=2]
+[ext_resource path="res://Lightning.gd" type="Script" id=3]
 
-[sub_resource type="ShaderMaterial" id=1]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4.61755, 89.0411 )
+
+[sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 2 )
 
-[node name="Lightning" type="Sprite"]
-material = SubResource( 1 )
-position = Vector2( 176.231, 107.298 )
+[node name="Lightning" type="Area2D"]
+position = Vector2( 0.82399, 7.82803 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 151.204, 101.352 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 150.427, 102.227 )
 rotation = 1.5708
-scale = Vector2( 2.68731, 0.275367 )
+scale = Vector2( 2.71679, 0.20621 )
 texture = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_Lightning_body_entered"]
