@@ -82,7 +82,8 @@ func _physics_process(delta):
 					fire_ball.set_fireball_direction(-1)
 				get_parent().add_child(fire_ball)
 				fire_ball.position = $Position2D.global_position
-		if Input.is_action_just_pressed("l_press"): 
+		if Input.is_action_just_pressed("l_press"):
+			yield(get_tree().create_timer(10), "timeout") 
 			var light_instance = light.instance()
 			randomize()
 			var spawnPos = get_parent().get_node("spawnPos").get_children()
@@ -92,7 +93,6 @@ func _physics_process(delta):
 			var pos = spawnPonts.get_global_position()
 			light_instance.set_global_position(pos)
 			get_parent().add_child(light_instance)
-			#print(light)
 			
 		velocity.y += gravity
 		
